@@ -11,7 +11,7 @@
 
   <section class="hero" id="home">
     <div class="wrapper">
-      <h4>Rich form <a href="https://taptapkaboom.com">Tap Tap Kaboom</a> presents </h4>
+      <h4>Rich from <a href="javascript:()" onclick="showModal();">Tap Tap Kaboom</a> presents </h4>
       <h1>The Silliest &amp;<br/>
         Most Awesome Gang<br/>
         In the World
@@ -21,7 +21,7 @@
         They are the best of friends.
       </h3>
 
-      <a class="cta alt" href="#more-info">Read More</a>
+      <div class="cta alt"><a href="#more-info">Read More</a></div>
 
       <div class="character1"></div>
       <div class="character2"></div>
@@ -35,7 +35,7 @@
     <ul>
       <li><a href="#more-info">More Info</a></li>
       <li><a href="#story">The Story</a></li>
-      <li><a href="#">Sign Up</a></li>
+      <li><a href="javascript:()" onclick="showModal();">Sign Up</a></li>
     </ul>
   </nav>
 
@@ -44,7 +44,7 @@
       <h2 >Join The Fan Club</h2>
       <p>Every week we have <span class="highlight">a party.</span> If you want to join us then join our fan club. Members will also receive pictured of us in all kinds of shapes and sizes. Cool huh?</p>
     </div>
-    <div class="cta">Sign Me Up!</div>
+    <div class="cta" onclick="showModal();">Sign Me Up!</div>
   </section>
 
   <div id="story"></div>
@@ -80,37 +80,54 @@
   </section>
 
   <footer class="footer">
-    <p>All credit goes to Rich from <a href="https://taptapkaboom.com">Tap Tap Kaboom </a></p>
+    <p>All credit goes to Rich from <a href="javascript:()" onclick="showModal();">Tap Tap Kaboom </a></p>
 
   </footer>
 
-  <section class="modal">
-    <div class="blanket"></div>
-    <div class="content">
-      <h2>Fill In Your Details</h2>
-      <form action="">
-        <div class="form-action">
-          <label for="">Your First Name</label> 
-          <input type="text" placholder="Awesomeface" value="Shirley" />
-        </div>
-        <div class="form-action">
-          <label for="">Your Last Name</label>
-          <input type="text" placholder="Cirlceface" value="Shirley" />
-        </div>
-        <div class="form-action">
-          <label for="">Your Favourite Color</label>
-          <input type="text" placholder="Awesomeface" value="Pink" />
-        </div>
-        <div class="form-action">
-          <label for="">Your Favourite Food</label>
-          <input type="text" placholder="Awesomeface" value="Apple Pie" />
-        </div>
+  <section id="modal" class="modal">
+    <div class="blanket">
+      <div class="content">
+        <h2>Fill In Your Details</h2>
+          <form action="">
 
-        <div class="cta">I Want In!</div>
+            <div class="row">
+              <div class="form-action">
+                <div class="item">
+                  <label for="">Your First Name</label> 
+                  <input type="text" placholder="Awesomeface" value="Shirley" >
+                </div>
+              </div>
+              <div class="form-action">
+                <div class="item">
+                  <label for="">Your Last Name</label>
+                  <input type="text" placholder="Circleface" >
+                </div>
+              </div>
+            </div>
 
-      </form>
-      <div class="close">Close</div>
-    </div>
-  </section>
+            <div class="row">
+              <div class="form-action">
+                <div class="item">
+                  <label for="">Your Favourite Color</label>
+                  <input type="text" placholder="Pink" >
+                </div>
+              </div>
+              <div class="form-action">
+                <div class="item">
+                  <label for="">Your Favourite Food</label>
+                  <input type="text" placholder="Apple Pie" >
+                </div>
+              </div>
+            </div>
+
+          <div class="cta">I Want In!</div>
+
+        </form>
+        <div class="close" onclick="hideModal();">Close</div>
+      </div>
+  </div> 
+</section>
 </body>
 </html>  
+
+<script src="script.js"" type="text/javascript"></script>
