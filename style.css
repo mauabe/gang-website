@@ -2,7 +2,7 @@
 
 body, html {
   /* background-color: yellow; */
-  font-family: 'Open Sans', sans-srif;
+  font-family: 'Open Sans', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -94,29 +94,38 @@ p {
   bottom: 74px;
   right: 109px;
 }
-
+a.cta, 
 div.cta {
-  color: white;
   font-size: 30px;
   font-weight: bold;
-  text-decoration: none;
+  color: white;
   background-color: #007fff;
   display: inline-block;
-  box-shadow: 0 0 0 10px rgba(0, 127, 255, 0.25);
+  box-shadow: 0 0 0 10px rgba(0, 127, 255, 0.15);
   padding: 20px 30px;
-  border-radius: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
+a.cta:active, 
+div.cta:active {
+  opacity: 0.7;
+}
+
+a.cta.alt,
 div.cta.alt {
   background-color: #ffd400;
   color: #111111;
-  box-shadow: 0 0 0 10px solid rgba(34, 84, 133, 0.5);
+  box-shadow: 0 0 0 10px solid #111111;
 }
 
-div.cta.alt a{
+/* div.cta.alt a{
   color: #111111;
   text-decoration: none;
-}
+} */
 /* NAVBAR SECTION */
 
 nav {
@@ -125,6 +134,7 @@ nav {
   box-shadow: 0 5px 8px rgba(0,0,0,0.2 );
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 nav .logo {
@@ -189,14 +199,20 @@ nav ul li a {
 
 .separator {
   background-color: #111111;
-  height: 4px;
-  width: 60px;
-  margin: 10px auto 40px;
+  height: 10px;
+  width: 470px;
+  margin: 70px auto 60px;
 }
 
 .nb-list {
   width: 470px;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  background-color: #ededed;
+  float: left;
+  margin: 0 20px 20px 0;
+  position: relative;
+  z-index: -1;
 }
 
 .nb-list li {
@@ -207,10 +223,16 @@ nav ul li a {
   color:#fff;
   display: block;
   padding: 20px;
+  margin-bottom: 20px;
+  padding: 6px 20px;
+  box-sizing: border-box;
 }
 
-.story {
-
+.story h3{
+  position: relative;
+ font-size: 40px;
+ font-weight: 800;
+ z-index: -3;
 }
 
 .nb-list li.red {
@@ -222,7 +244,12 @@ nav ul li a {
 }
 
 .nb-list li.grey {
-  background-color:rgba(0,0,0,0.1);
+  background-color:rgba(0,0,0, 0.1);
+}
+
+.nb-list li.yellow {
+  background-color: #ffd400;
+  color: #111111;
 }
 
 .nb-list li.pink {
@@ -233,40 +260,49 @@ nav ul li a {
   background-color: #fa8072;
 }
 
-.nb-list li.yellow {
-  background-color: #ffd400;
-  color: #111111;
-}
-
 .nb-list li.dragging {
-  background-color: #ffd400;
-  transform: rotate(-8deg);
-  background-image: url(img/hand.png) no-repeat 0 0;
+  position: absolute;
+  top: 80px;
+  left: 70px;
+  right: -30px;
+  transform: rotate(6deg);
+  box-shadow: 0 2px 14px rgba(0,0,0, 0.5);
 }
 
+.nb-list li.dragging:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 54px;
+  height: 50px;
+  background: url(img/hand.png) no-repeat 0 0;
+  background-size: 100%;
+  bottom: -25px;
+  left: 60%;
+  z-index: 1;
+  }
 
+/* SECTION GANG IMAGE + FOOTER */
 
-/* 
+.gang-pic {
+  display: block;
+  margin: 0 auto;
+}
 
-  <div class="separator"></div>
+footer {
+  text-align: center;
+}
 
-  <section id="story"class="story">
-    <ul>
-      <li class="blue">Rock 'n Roll</li>
-      <li>&nbsp;</li>
-      <li class="dragging">Laughter</li>
-      <li class="blue">Square Offs</li>
-      <li class="pink">Circuitous Routes</li>
-      <li class="salmon">Trigonometry</li>
-      <li clas="blue">Red hats</li>
-      <li class="yellow">Being Silly</li>
-    </ul>
-    <h3>Left: Things We Find Important <br/>Bellow: Our Story</h3>
-    <p>Once upon a time there was a group of shapes. They were mostly black and retangular. They were mean and very serious.</p>
-    <p>And so they kicked th 3 shapes that didn't conform out of their gang, which was called the Right Angled gang.</p>
-    <p>And so these 3 shapes were very sad, but found great joy and comfort being around each other. Tehysoon started having a lot of fun, started rocking and rolling, started being silly, and became the most well-known shap gang in the universe.</p>
-    <p>They even started making fun of squares and rectangles in what they like to call "Square offs"!</p>
+footer p {
+  color: rgba(0,0,0, 0.4);
+  font-size: 15px;
+  margin: 84px 0 45px;
+}
 
+footer p a{
+  color: rgba(0,0,0, 0.4);
+}
 
-  </section>
-*/
+.modal {
+  display:none;
+}
