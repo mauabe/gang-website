@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
 
 body, html {
-  /* background-color: yellow; */
   font-family: 'Open Sans', sans-serif;
   padding: 0;
   margin: 0;
@@ -94,7 +93,7 @@ p {
   bottom: 74px;
   right: 109px;
 }
-/* a.cta, */
+
 div.cta {
   font-size: 30px;
   font-weight: bold;
@@ -109,6 +108,11 @@ div.cta {
   border: none;
   cursor: pointer;
 }
+
+div.cta a{
+  text-decoration: none;
+  color: white;
+} 
 
 /* a.cta.alt, */
 div.cta.alt {
@@ -325,7 +329,8 @@ footer p a{
 }
 
 .modal .blanket {
-  background-color: rgba(0,0,0, 0.7);
+  background-color: rgba(0,0,0, 0.6); 
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -370,7 +375,6 @@ footer p a{
   cursor: pointer;
 }
 
-
 .modal .row {
   margin-bottom: 10px;
 }
@@ -410,41 +414,3 @@ footer p a{
   width: 100%;
   padding: 15px 20px;
 }
-
-.form-action {}
-
-label {}
-
-input {}
-
-
-/* 
- <section class="modal">
-    <div class="blanket"></div>
-    <div class="content">
-      <h2>Fill In Your Details</h2>
-      <form action="">
-        <div class="form-action">
-          <label for="">Your First Name</label> 
-          <input type="text" placholder="Awesomeface" value="Shirley" />
-        </div>
-        <div class="form-action">
-          <label for="">Your Last Name</label>
-          <input type="text" placholder="Cirlceface" value="Shirley" />
-        </div>
-        <div class="form-action">
-          <label for="">Your Favourite Color</label>
-          <input type="text" placholder="Awesomeface" value="Pink" />
-        </div>
-        <div class="form-action">
-          <label for="">Your Favourite Food</label>
-          <input type="text" placholder="Awesomeface" value="Apple Pie" />
-        </div>
-
-        <div class="cta">I Want In!</div>
-
-      </form>
-      <div class="close">Close</div>
-    </div>
-  </section>
-*/
